@@ -1,8 +1,17 @@
 /* ==============================================================================
-   DDL & Batch Loading Script: Volve Production Surveillance Ingestion
+Project:     01_volve_production_shut_in_surveillance
+   Script:      01_create_and_load_volve_daily.sql
+   Purpose:     Initialize the `petroleum_surveillance` database, recreate
+                `volve_production_daily` and `volve_production_monthly` with
+                composite primary keys and indexes, and batch-load cleaned CSV
+                production records in MySQL 8.0+.
+   Key Logic:   Uses temporary logging (`tmp_log`) with microsecond timing,
+                enables global `local_infile` for `LOAD DATA LOCAL INFILE`,
+                normalizes empty/CRLF strings to `NULL` via `NULLIF(TRIM(...))`
+                and `REPLACE(..., '\r', '')`, and verifies row counts.
    Sources:
-     - /Users/abdirahmanosmansiyad/Desktop/Petroelum_surveillance peoject 1/volve_daily_production_all_rows_clean.csv
-     - /Users/abdirahmanosmansiyad/Desktop/Petroelum_surveillance peoject 1/volve_monthly_production_all_rows_clean.csv
+   - volve_daily_production_all_rows_clean.csv
+   - volve_monthly_production_all_rows_clean.csv
    ============================================================================== */
 
 SET @batch_start = NOW(6);
