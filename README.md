@@ -50,7 +50,7 @@ The repository organizes each project into clean ingestion/DDL and analytical qu
                                                               | PTA Screening &       |
                                                               | Completion Analytics  |
                                                               +-----------------------+
-🛠️ Tech Stack & Prerequisites
+## 🛠️ Tech Stack & Prerequisites
 Database Engine: MySQL 8.0+
 
 Database Client: MySQL Workbench (macOS)[cite: 2, 4]
@@ -59,7 +59,7 @@ Querying & Analytics: SQL (CTEs, Window Functions LAG() SUM() OVER(), NULLIF, Ag
 
 Version Control: Git & GitHub
 
-📂 Repository Structure
+## 📂 Repository Structure
 petroleum surveillance completion sql/
 ├── README.md
 ├── LICENSE
@@ -75,13 +75,13 @@ petroleum surveillance completion sql/
     └── analytics/
         └── 02_normalize_completion_intensity.sql
 
-🌟 About the Author
+## 🌟 About the Author
 Hi! I am Abdirahman Osman Siyad, a Petroleum Engineer & Data Analyst based in New Cairo, Cairo, Egypt, holding a B.E. in Petroleum Engineering from NED University of Engineering & Technology and PEC registration (PETGAS/004551).
 I combine upstream petroleum engineering experience (including SSGC gas transmission and hydraulic fracturing/reservoir modeling) with practical data analytics in SQL, Python, Excel, and Tableau.
 Portfolio Website: https://abdirahmansiyad.github.io/
 Email: Abdirahman.Osman.Siyad@gmail.com
 
-🛡️ License
+## 🛡️ License
 Distributed under the MIT License. See LICENSE for more information.
 
 
