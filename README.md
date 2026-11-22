@@ -50,6 +50,7 @@ The repository organizes each project into clean ingestion/DDL and analytical qu
                                                               | PTA Screening &       |
                                                               | Completion Analytics  |
                                                               +-----------------------+
+
 ## 🛠️ Tech Stack & Prerequisites
 Database Engine: MySQL 8.0+
 
