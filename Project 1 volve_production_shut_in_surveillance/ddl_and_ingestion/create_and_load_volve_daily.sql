@@ -1,6 +1,6 @@
 /* ==============================================================================
 Project:     01_volve_production_shut_in_surveillance
-   Script:      01_create_and_load_volve_daily.sql
+    Script:      create_and_load_volve_daily.sql
    Purpose:     Initialize the `petroleum_surveillance` database, recreate
                 `volve_production_daily` and `volve_production_monthly` with
                 composite primary keys and indexes, and batch-load cleaned CSV
@@ -133,7 +133,8 @@ VALUES (
 SET @step_start = NOW(6);
 TRUNCATE TABLE volve_production_daily;
 
-LOAD DATA LOCAL INFILE '/Users/abdirahmanosmansiyad/Desktop/Petroelum_surveillance peoject 1/volve_daily_production_all_rows_clean.csv'
+-- Replace both placeholder paths with the absolute locations of the downloaded CSV files.
+LOAD DATA LOCAL INFILE '/absolute/path/to/volve_daily_production_all_rows_clean.csv'
 INTO TABLE volve_production_daily
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ','
@@ -212,7 +213,7 @@ VALUES (
 SET @step_start = NOW(6);
 TRUNCATE TABLE volve_production_monthly;
 
-LOAD DATA LOCAL INFILE '/Users/abdirahmanosmansiyad/Desktop/Petroelum_surveillance peoject 1/volve_monthly_production_all_rows_clean.csv'
+LOAD DATA LOCAL INFILE '/absolute/path/to/volve_monthly_production_all_rows_clean.csv'
 INTO TABLE volve_production_monthly
 CHARACTER SET utf8mb4
 FIELDS TERMINATED BY ','
